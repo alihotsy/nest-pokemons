@@ -1,4 +1,4 @@
-version: '3.7'
+
 
 services:
   db:
@@ -7,6 +7,10 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - ./mongo:/data/db
+      - pokemon_mongo_v:/data/db
     environment:
       MONGODB_DATABASE: nest-pokemon
+
+volumes:
+  pokemon_mongo_v:
+    external: false
