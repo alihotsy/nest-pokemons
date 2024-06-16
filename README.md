@@ -21,6 +21,20 @@ npm i -g @nestjs/cli
 docker-compose -f ./docker/docker-compose.yml -p pokemon_service  up -d
 ```
 
+5. Clonar el archivo __.env.template.__ y renonmbrar la copia a __.env.__
+
+6. Llenar las variables de entornos definidas en el ```.env```
+
+7. Ejecutar la aplicación en dev:
+```
+npm run start:dev 
+```
+
+8. Reconstruir la base de datos con la semilla (seed)
+```
+http://localhost:3000/api/v2/seed
+```
+
 ## Stack usado
 * Mongo DB
 * Nest
