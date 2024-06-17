@@ -38,3 +38,13 @@ http://localhost:3000/api/v2/seed
 ## Stack usado
 * Mongo DB
 * Nest
+
+# Production Build
+1. Crear el archivo ```.env.prod```
+2. Llenar las variables de entorno de producción.
+3. En el docker-compose.prod.yaml cambiar la propiedad __external: true__ en __false__
+   en caso de no tener un volumen ya creado.
+4. Crear la nueva imagen usando el commando:
+```
+docker-compose -f./docker/docker-compose.prod.yaml --env-file .env.prod -p poke_service up -d 
+```
